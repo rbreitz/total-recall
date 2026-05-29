@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/contacts.md",
+    "content": "# Key Contacts — Northwind Bank\n\n- Priya Nadkarni — VP Data Platform (economic buyer)\n- Tom Reyes — Lead Platform Engineer (technical champion)\n",
+    "char_count": 156
+  },
+  {
+    "path": "/objections/data-residency.md",
+    "content": "# Objection: Data residency / on-prem requirement\nStatus: open\n\n**Their concern:** EU + US data must stay in region; they doubt a managed service can guarantee it.\n\n**Our current best answer:** Helios offers regional isolation — EU data stays in EU, US in US, enforced at the storage layer.\n",
+    "char_count": 286
+  },
+  {
+    "path": "/objections/latency-sla.md",
+    "content": "# Objection: Latency SLA vs self-managed Kafka\nStatus: open\n\n**Their concern:** Will managed Helios match the tail latency of their tuned on-prem Kafka?\n\n**Our current best answer:** Helios commits a p99 < 25ms SLA at their volume; share the benchmark vs a comparable self-managed cluster.\n",
+    "char_count": 290
+  },
+  {
+    "path": "/objections/migration-risk.md",
+    "content": "# Objection: Migration risk\nStatus: open\n\n**Their concern:** Cutover from Kafka + Flink is risky for a bank.\n\n**Our current best answer:** Dual-run period with mirrored topics; phased cutover, no big-bang switch.\n",
+    "char_count": 214
+  },
+  {
+    "path": "/objections/total-cost.md",
+    "content": "# Objection: Total cost vs existing Kafka\nStatus: open (their loudest)\n\n**Their concern:** They've already paid for on-prem Kafka; why add spend?\n\n**Our current best answer:** TCO including the 6-person platform team's time favours managed Helios within 18 months.\n",
+    "char_count": 263
+  },
+  {
+    "path": "/objections/vendor-lock-in.md",
+    "content": "# Objection: Vendor lock-in\nStatus: open\n\n**Their concern:** Proprietary managed service is hard to leave.\n\n**Our current best answer:** Kafka-compatible API; topics and consumers port back out without rewrites.\n",
+    "char_count": 211
+  },
+  {
+    "path": "/pitch/strategy.md",
+    "content": "# Pitch Strategy — Final Call\nDecided: session 1\n\nSequence (current deck):\n1. Problem framing\n2. Helios architecture\n3. Managed vs self-managed TCO\n4. Security & residency\n5. Migration path\n6. Pricing\n7. Next steps\n\nLead with TCO — their loudest prior objection was cost.\n",
+    "char_count": 271
+  },
+  {
+    "path": "/prospect/environment.md",
+    "content": "# Northwind Bank — Environment\nLearned: session 1\n\n- Streaming: self-managed Apache Kafka, on-prem.\n- Analytics: AWS.\n- Stream processing: Apache Flink.\n- Scale: peak ~2M events/sec.\n- Compliance: SOC2 + PCI; strict data residency (EU + US).\n- Platform team: 6 engineers.\n",
+    "char_count": 270
+  }
+]

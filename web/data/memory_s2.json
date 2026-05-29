@@ -1,0 +1,52 @@
+[
+  {
+    "path": "/competitive/streamcorp.md",
+    "content": "# Competitive Intel — StreamCorp\nDated: 2026-05-25 (from product management)\n\n- StreamCorp cut prices ~20%.\n- Announced a managed connector Helios does not yet have.\n- Counter: Helios just shipped native active-active multi-region + residency pinning — StreamCorp has neither. Compete on resilience + residency, not price.\n",
+    "char_count": 318
+  },
+  {
+    "path": "/contacts.md",
+    "content": "# Key Contacts — Northwind Bank\n\n- Priya Nadkarni — VP Data Platform (economic buyer)\n- Tom Reyes — Lead Platform Engineer (technical champion)\n",
+    "char_count": 156
+  },
+  {
+    "path": "/objections/active-active-failover.md",
+    "content": "# Objection: Active-active multi-region failover (<5s RPO)\nRaised: 2026-05-22 (new CISO)\nStatus: STRONG answer available\n\n**Their concern:** Need active-active multi-region with <5s RPO; the current pitch didn't address it.\n\n**Our answer (2026-05-25):** Helios shipped native active-active multi-region — directly meets the mandate. Demo the failover runbook on the call.\n",
+    "char_count": 372
+  },
+  {
+    "path": "/objections/data-residency.md",
+    "content": "# Objection: Data residency / on-prem requirement\nStatus: open\n\n**Their concern:** EU + US data must stay in region; they doubt a managed service can guarantee it.\n\n**Our current best answer:** Helios offers regional isolation — EU data stays in EU, US in US, enforced at the storage layer.\n",
+    "char_count": 286
+  },
+  {
+    "path": "/objections/latency-sla.md",
+    "content": "# Objection: Latency SLA vs self-managed Kafka\nStatus: open\n\n**Their concern:** Will managed Helios match the tail latency of their tuned on-prem Kafka?\n\n**Our current best answer:** Helios commits a p99 < 25ms SLA at their volume; share the benchmark vs a comparable self-managed cluster.\n",
+    "char_count": 290
+  },
+  {
+    "path": "/objections/migration-risk.md",
+    "content": "# Objection: Migration risk\nStatus: open\n\n**Their concern:** Cutover from Kafka + Flink is risky for a bank.\n\n**Our current best answer:** Dual-run period with mirrored topics; phased cutover, no big-bang switch.\n",
+    "char_count": 214
+  },
+  {
+    "path": "/objections/total-cost.md",
+    "content": "# Objection: Total cost vs existing Kafka\nStatus: open (their loudest)\n\n**Their concern:** They've already paid for on-prem Kafka; why add spend?\n\n**Our current best answer:** TCO including the 6-person platform team's time favours managed Helios within 18 months.\n",
+    "char_count": 263
+  },
+  {
+    "path": "/objections/vendor-lock-in.md",
+    "content": "# Objection: Vendor lock-in\nStatus: open\n\n**Their concern:** Proprietary managed service is hard to leave.\n\n**Our current best answer:** Kafka-compatible API; topics and consumers port back out without rewrites.\n",
+    "char_count": 211
+  },
+  {
+    "path": "/pitch/strategy.md",
+    "content": "# Pitch Strategy — Final Call\nDecided: session 1 · Updated: session 2\n\nResequenced — lead with resilience, not cost:\n1. Problem framing\n2. Active-active multi-region failover (NEW — answers the CISO's <5s RPO mandate with Helios's just-shipped native active-active)\n3. Security, residency & residency pinning\n4. Helios architecture\n5. Managed vs self-managed TCO — pre-empt StreamCorp's 20% price cut by reframing on TCO + reliability\n6. Migration path\n7. Pricing\n8. Next steps\n\nWhy changed: the new CISO failover mandate and StreamCorp's price cut moved the center of gravity from cost to resilience. Lead with failover, not TCO.\n",
+    "char_count": 627
+  },
+  {
+    "path": "/prospect/environment.md",
+    "content": "# Northwind Bank — Environment\nLearned: session 1 · Updated: session 2\n\n- Streaming: self-managed Apache Kafka, on-prem.\n- Analytics: AWS.\n- Stream processing: Apache Flink.\n- Scale: peak ~2M events/sec.\n- Compliance: SOC2 + PCI; strict data residency (EU + US).\n- Platform team: 6 engineers.\n- NEW (2026-05-22): new CISO mandates active-active multi-region failover, <5s RPO.\n- Leadership: new CISO holds an architecture veto.\n",
+    "char_count": 425
+  }
+]
