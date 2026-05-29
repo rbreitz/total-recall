@@ -17,3 +17,7 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Web app
+web/frontend/node_modules/
+web/frontend/dist/

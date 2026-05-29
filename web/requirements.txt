@@ -1,0 +1,10 @@
+# Web visualization layer.
+#
+# Serving the app (backend):
+fastapi>=0.110
+uvicorn[standard]>=0.29
+#
+# Capture scripts (snapshot_memory.py) — also need the repo's root deps
+# (anthropic, python-dotenv). truststore lets the Anthropic SDK reach the API
+# behind corporate TLS inspection.
+truststore>=0.10

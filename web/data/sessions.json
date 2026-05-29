@@ -1,0 +1,23 @@
+[
+  {
+    "n": 1,
+    "title": "Baseline — first prep call",
+    "question": "Tomorrow's call is the final pitch. What's our strategy?",
+    "answer": "Here's the plan for tomorrow's final pitch with Northwind Bank.\n\nRun the current deck, and lead with cost — TCO has been their loudest objection so far:\n\n1. Problem framing — the cost and operational drag of self-managing Kafka at ~2M events/sec.\n2. Helios architecture.\n3. Managed vs self-managed TCO (lead here).\n4. Security & data residency (SOC2/PCI, EU + US).\n5. Migration path — de-risk the cutover from their Flink/Kafka stack.\n6. Pricing.\n7. Next steps.\n\nBe ready for the five standing objections: latency SLA, data residency, total cost, migration risk, and vendor lock-in. Priya Nadkarni (VP Data Platform) is the economic buyer; Tom Reyes (lead platform engineer) is our technical champion.",
+    "customer": "northwind"
+  },
+  {
+    "n": 2,
+    "title": "After memory + new context",
+    "question": "Tomorrow's call is the final pitch. What's our strategy?",
+    "answer": "The strategy has changed since last call — two things moved the deal, so don't run the old deck.\n\nWhat changed:\n- Northwind's new CISO (2026-05-22) now mandates active-active multi-region failover with <5s RPO. The old pitch didn't address this at all.\n- Competitive update (2026-05-25): StreamCorp cut prices ~20% and announced a managed connector we lack — BUT Helios just shipped native active-active multi-region and residency pinning, which StreamCorp can't match.\n\nResequenced pitch — lead with resilience, not cost:\n1. Problem framing.\n2. Active-active multi-region failover (NEW, lead here) — show that Helios meets the CISO's <5s RPO mandate natively. This is now the deciding requirement.\n3. Security, residency & residency pinning.\n4. Helios architecture.\n5. Managed vs self-managed TCO — and pre-empt StreamCorp: reframe off their 20% sticker cut onto total cost + reliability, where active-active wins.\n6. Migration path.\n7. Pricing.\n8. Next steps.\n\nWin theme: StreamCorp is cheaper but cannot do active-active multi-region or residency pinning — the CISO's own mandate plays straight to our just-shipped strength. Make the CISO a champion. Priya remains the economic buyer; Tom the technical champion.",
+    "customer": "northwind"
+  },
+  {
+    "n": 3,
+    "title": "Adversarial reconcile",
+    "question": "These updated documents just came in — reconcile them against memory and tell me our strategy.",
+    "answer": "⚠️ Conflict — I can't reconcile these new documents automatically.\n\nThe new \"stack overview\" says Northwind is 100% on-prem with no AWS and only ~50k events/sec, and another doc claims the latency objection \"was never raised.\" Both contradict what I have in memory from our earlier calls (AWS for analytics, ~2M events/sec, latency SLA logged as a live objection), and neither new document carries an effective date or a stated reason for the change.\n\nPer policy I will not overwrite memory on undated, unexplained contradictions. Which should I trust?\n- Memory (sessions 1–2): AWS analytics, ~2M events/sec, latency objection open.\n- New docs (undated): on-prem only, ~50k events/sec, no latency objection.\n\nTell me which is authoritative (or share a dated source) and I'll update accordingly. Until then, my strategy from the last call stands.",
+    "customer": "northwind"
+  }
+]
